@@ -18,7 +18,7 @@ with tf.device('/cpu:0'):
         images = tf.placeholder("float", [2, 224, 224, 3])
         feed_dict = {images: batch}
 
-        vgg = vgg16.Vgg16()
+        vgg = VGGNet16.Vgg16()
         with tf.name_scope("content_vgg"):
             vgg.build(images)
 
